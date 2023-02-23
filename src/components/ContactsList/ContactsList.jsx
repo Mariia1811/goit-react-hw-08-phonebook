@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact, fetchContacts } from 'redux/operations';
-import { selectFilteredContacts} from 'redux/selectContacts';
-import { BtnDellete, ContactList, ItemEl, NumberEl } from './Contacts.styled';
+import { deleteContact, fetchContacts } from 'redux/contacts/operations';
+import { selectFilteredContacts} from 'redux/contacts/selectContacts';
+import { BtnDellete, ContactList, ItemEl, NumberEl } from './ContactsList.styled';
 
-function Contacts() {
+function ContactsList() {
   const dispatch = useDispatch();
   const contactsList = useSelector(selectFilteredContacts);
 
@@ -32,4 +32,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default ContactsList;

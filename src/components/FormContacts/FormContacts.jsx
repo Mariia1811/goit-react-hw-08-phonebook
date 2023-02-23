@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts } from 'redux/selectContacts';
-import { addContact } from 'redux/operations'
+import { selectContacts } from 'redux/contacts/selectContacts';
+import { addContact } from 'redux/contacts/operations'
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { FormStyled, Input, BtnStyled } from './FormElem.styled';
+import { FormStyled, Input, BtnStyled } from './FormContacts.styled';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -16,7 +16,6 @@ function FormElem() {
 
   const handleSubmit = (values, { resetForm }) => {
     const newContact = {
-      createdAt: new Date(),
       name: values.name,
       number: values.number,
     };

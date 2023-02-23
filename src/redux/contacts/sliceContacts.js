@@ -9,7 +9,7 @@ const handleRejected = (state, { payload }) => {
   state.contacts.error = payload;
 };
 
-export const contactSlice = createSlice({
+const contactSlice = createSlice({
   name: 'contacts',
   initialState: {
     contacts: {
@@ -50,4 +50,4 @@ export const contactSlice = createSlice({
 });
 
 export const { changeFilter } = contactSlice.actions;
-// export const contactsReducer = contactSlice.reducer;
+export const contactsReducer = contactSlice.reducer;
