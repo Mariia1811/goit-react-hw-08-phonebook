@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import { Formik, Form } from 'formik';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
@@ -34,6 +35,7 @@ const RegisterForm = () => {
     resetForm();
   };
   return (
+    <Container maxWidth='xl'>
     <RegisterFormWrapper>
       <RegisterFormTitle>Registration Form</RegisterFormTitle>
       <Formik
@@ -85,7 +87,8 @@ const RegisterForm = () => {
           </Form>
         )}
       </Formik>
-    </RegisterFormWrapper>
+      </RegisterFormWrapper>
+      </Container>
   );
 };
 
