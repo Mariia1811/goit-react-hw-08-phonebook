@@ -4,18 +4,18 @@ import FormElem from 'components/FormContacts';
 import Container from '@mui/material/Container';
 import { MainTitle, Title, Wrapper } from './Contacts.styled';
 
-function Contacts() {
+const Contacts = () => {
   return (
-       <Container maxWidth='xl'>
-    <Wrapper>
-      <MainTitle>Phonebook</MainTitle>
-      <FormElem />
-      <Title>Contacts</Title>
-      <Filter />
-      <ContactsList />
+    <Container maxWidth="xl">
+      <Wrapper>
+        <MainTitle>Add contact</MainTitle>
+        <FormElem />
+        <Title>Contacts</Title>
+        <Filter />
+        <ContactsList />
       </Wrapper>
-      </Container>
+    </Container>
   );
-}
+};
 
 export default Contacts;

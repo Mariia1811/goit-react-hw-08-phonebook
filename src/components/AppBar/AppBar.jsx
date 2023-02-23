@@ -1,20 +1,17 @@
 import AuthNav from 'components/AuthNav';
 import UserMenu from 'components/UserMenu';
-import { useAuth } from '../../hooks/useAuth';
-import Container from '@mui/material/Container';
-import { HeaderStyled } from './AppBar.styled';
+import useAuth from '../../hooks/useAuth';
+import { HeaderStyled, Logo } from './AppBar.styled';
 
-function AppBar() {
+const AppBar = () => {
   const { isLoggedIn } = useAuth();
 
   return (
-     <Container maxWidth='xl'>
     <HeaderStyled>
-      <h1>phonebook</h1>
+      <Logo>phonebook</Logo>
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
-      </HeaderStyled>
-      </Container>
+    </HeaderStyled>
   );
-}
+};
 
 export default AppBar;

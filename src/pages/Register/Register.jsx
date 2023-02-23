@@ -35,60 +35,64 @@ const RegisterForm = () => {
     resetForm();
   };
   return (
-    <Container maxWidth='xl'>
-    <RegisterFormWrapper>
-      <RegisterFormTitle>Registration Form</RegisterFormTitle>
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          password: '',
-          confirmPassword: '',
-        }}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <RegisterFormField>
-              <RegisterFormLabel htmlFor="name">Name</RegisterFormLabel>
-              <RegisterFormInput type="text" name="name" />
-              <RegisterFormErrorMessage name="name" component="div" />
-            </RegisterFormField>
+    <Container maxWidth="xl">
+      <RegisterFormWrapper>
+        <RegisterFormTitle>Registration Form</RegisterFormTitle>
+        <Formik
+          initialValues={{
+            name: '',
+            email: '',
+            password: '',
+            confirmPassword: '',
+          }}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <RegisterFormField>
+                <RegisterFormLabel htmlFor="name">
+                  Name
+                  <RegisterFormInput type="text" name="name" />
+                </RegisterFormLabel>
+                <RegisterFormErrorMessage name="name" component="div" />
+              </RegisterFormField>
 
-            <RegisterFormField>
-              <RegisterFormLabel htmlFor="email">
-                Email Address
-              </RegisterFormLabel>
-              <RegisterFormInput type="email" name="email" />
-              <RegisterFormErrorMessage name="email" component="div" />
-            </RegisterFormField>
+              <RegisterFormField>
+                <RegisterFormLabel htmlFor="email">
+                  Email
+                  <RegisterFormInput type="email" name="email" />
+                </RegisterFormLabel>
+                <RegisterFormErrorMessage name="email" component="div" />
+              </RegisterFormField>
 
-            <RegisterFormField>
-              <RegisterFormLabel htmlFor="password">Password</RegisterFormLabel>
-              <RegisterFormInput type="password" name="password" />
-              <RegisterFormErrorMessage name="password" component="div" />
-            </RegisterFormField>
+              <RegisterFormField>
+                <RegisterFormLabel htmlFor="password">
+                  Password
+                  <RegisterFormInput type="password" name="password" />
+                </RegisterFormLabel>
+                <RegisterFormErrorMessage name="password" component="div" />
+              </RegisterFormField>
 
-            <RegisterFormField>
-              <RegisterFormLabel htmlFor="confirmPassword">
-                Confirm Password
-              </RegisterFormLabel>
-              <RegisterFormInput type="password" name="confirmPassword" />
-              <RegisterFormErrorMessage
-                name="confirmPassword"
-                component="div"
-              />
-            </RegisterFormField>
+              <RegisterFormField>
+                <RegisterFormLabel htmlFor="confirmPassword">
+                  Confirm Password
+                  <RegisterFormInput type="password" name="confirmPassword" />
+                </RegisterFormLabel>
+                <RegisterFormErrorMessage
+                  name="confirmPassword"
+                  component="div"
+                />
+              </RegisterFormField>
 
-            <RegisterFormSubmitButton type="submit" disabled={isSubmitting}>
-              Register
-            </RegisterFormSubmitButton>
-          </Form>
-        )}
-      </Formik>
+              <RegisterFormSubmitButton type="submit" disabled={isSubmitting}>
+                Register
+              </RegisterFormSubmitButton>
+            </Form>
+          )}
+        </Formik>
       </RegisterFormWrapper>
-      </Container>
+    </Container>
   );
 };
 

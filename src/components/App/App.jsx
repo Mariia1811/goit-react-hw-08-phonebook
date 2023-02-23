@@ -1,11 +1,11 @@
 import { useEffect, lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { refreshUser } from 'redux/auth/operations';
+import useAuth from '../../hooks/useAuth';
 import Layout from 'components/Layout/Layout';
 import PrivateRoute from 'components/Route/PrivateRoute';
 import RestrictedRoute from 'components/Route/RestrictedRoute';
-import { useDispatch } from 'react-redux';
-import { useAuth } from 'hooks/useAuth';
-import { refreshUser } from 'redux/auth/operations';
 const Contacts = lazy(() => import('pages/Contacts'));
 const Login = lazy(() => import('pages/Login'));
 const Register = lazy(() => import('pages/Register'));
@@ -20,7 +20,7 @@ const App = () => {
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
-  ) :  (
+  ) : (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Login />} />
@@ -36,7 +36,6 @@ const App = () => {
             <RestrictedRoute redirectTo="/contacts" component={<Login />} />
           }
         />
-
         <Route
           path="/contacts"
           element={

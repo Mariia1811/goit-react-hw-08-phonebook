@@ -3,13 +3,13 @@ import { changeFilter } from 'redux/contacts/sliceContacts';
 import { selectFilterValue } from 'redux/contacts/selectContacts';
 import { FilterWrap, Input, Text } from './Filter.styled';
 
-function Filter() {
+const Filter = () => {
   const dispatch = useDispatch();
   const filterValue = useSelector(selectFilterValue);
-  
-  function handleChange(e) {
+
+  const handleChange = e => {
     dispatch(changeFilter(e.target.value));
-  }
+  };
 
   return (
     <FilterWrap>
@@ -22,6 +22,6 @@ function Filter() {
       />
     </FilterWrap>
   );
-}
+};
 
 export default Filter;

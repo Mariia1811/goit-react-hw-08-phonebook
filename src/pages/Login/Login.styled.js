@@ -5,27 +5,42 @@ export const LoginFormWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 60px;
 `;
 
 export const LoginFormTitle = styled.h2`
-  font-size: 24px;
-  margin-bottom: 16px;
+  margin: 0 0 24px;
+  font-size: 32px;
+  font-style: oblique;
+  color: #576574;
+  text-shadow: #000 0px 0 1px;
 `;
 
 export const LoginFormField = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  gap: 16px;
 `;
 
 export const LoginFormLabel = styled.label`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   font-size: 18px;
   margin-bottom: 8px;
 `;
 
 export const LoginFormInput = styled(Field)`
+  min-width: 280px;
   padding: 8px;
-  font-size: 18px;
+  font-size: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.5);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  outline: none;
+   &:hover {
+   box-shadow: 0px 4px 4px rgba(0, 0, 200, 0.5);
 `;
 
 export const LoginFormErrorMessage = styled(ErrorMessage)`
@@ -33,17 +48,19 @@ export const LoginFormErrorMessage = styled(ErrorMessage)`
 `;
 
 export const LoginFormSubmitButton = styled.button`
-  padding: 8px 16px;
-  font-size: 18px;
-  background-color: #007bff;
-  color: white;
+   padding: 8px 18px;
+  font-size: 20px;
   border: none;
+  border-radius: 2px;
+  background-color:rgba(34, 47, 62, 0.4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-
   &:hover {
-    background-color: #0069d9;
-  }
+    background-color: #70a1ff;
+    border-color: #70a1ff;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 200, 0.5);
 
   &:disabled {
     background-color: lightgray;

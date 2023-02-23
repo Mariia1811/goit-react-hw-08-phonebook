@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectContacts';
-import { addContact } from 'redux/contacts/operations'
+import { addContact } from 'redux/contacts/operations';
 import { Formik } from 'formik';
 import * as yup from 'yup';
 import { FormStyled, Input, BtnStyled } from './FormContacts.styled';
@@ -10,7 +10,7 @@ const schema = yup.object().shape({
   number: yup.number().required(),
 });
 
-function FormElem() {
+const FormElem = () => {
   const contactsList = useSelector(selectContacts);
   const dispatch = useDispatch();
 
@@ -59,6 +59,6 @@ function FormElem() {
       </FormStyled>
     </Formik>
   );
-}
+};
 
 export default FormElem;
