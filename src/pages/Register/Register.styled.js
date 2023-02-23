@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
 
-export const RegisterFormWrapper = styled.div`
+export const RegisterFormWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const RegisterFormTitle = styled.h1`
+export const RegisterFormTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 16px;
 `;

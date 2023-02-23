@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   border-radius: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 `;
-export const MainTitle = styled.h1`
+export const MainTitle = styled.h2`
   margin: 0 0 8px;
   font-size: 32px;
   font-style: oblique;

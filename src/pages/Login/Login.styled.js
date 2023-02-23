@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Field, ErrorMessage } from 'formik';
 
-export const LoginFormWrapper = styled.div`
+export const LoginFormWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 
-export const LoginFormTitle = styled.h1`
+export const LoginFormTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 16px;
 `;

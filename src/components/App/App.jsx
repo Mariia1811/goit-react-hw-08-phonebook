@@ -23,7 +23,7 @@ const App = () => {
   ) :  (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Contacts />} />
+        <Route index element={<Login />} />
         <Route
           path="/register"
           element={
