@@ -3,7 +3,7 @@ import { selectContacts } from 'redux/contacts/selectContacts';
 import { addContact } from 'redux/contacts/operations';
 import { Formik } from 'formik';
 import * as yup from 'yup';
-import { FormStyled, Input, BtnStyled } from './FormContacts.styled';
+import { FormStyled, Input, BtnStyled, Title } from './FormContacts.styled';
 
 const schema = yup.object().shape({
   name: yup.string().required(),
@@ -34,7 +34,9 @@ const FormElem = () => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
+
       <FormStyled>
+        <Title>Add contact</Title>
         <label>
           Name:
           <Input

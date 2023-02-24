@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import { Field, Form } from 'formik';
 
+export const Title = styled.h2`
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-style: oblique;
+  color: #576574;
+  text-shadow: #000 0px 0 1px;
+`;
+
 export const FormStyled = styled(Form)`
   display: flex;
   gap: 16px;

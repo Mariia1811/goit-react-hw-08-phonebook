@@ -7,6 +7,7 @@ import {
   ContactList,
   ItemEl,
   NumberEl,
+  TitleList,
 } from './ContactsList.styled';
 
 const ContactsList = () => {
@@ -17,20 +18,23 @@ const ContactsList = () => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const handleClick =(id) => {
+  const handleClick = id => {
     dispatch(deleteContact(id));
-  }
+  };
   return (
-    <ContactList>
-      {contactsList?.map(({ id, name, number }) => (
-        <ItemEl key={id}>
-          <span>{name}: </span>
-          <NumberEl>{number}</NumberEl>
-          <BtnDellete onClick={() => handleClick(id)}>Delete</BtnDellete>
-        </ItemEl>
-      ))}
-    </ContactList>
+    <>
+      <TitleList>Contacts</TitleList>
+      <ContactList>
+        {contactsList?.map(({ id, name, number }) => (
+          <ItemEl key={id}>
+            <span>{name}: </span>
+            <NumberEl>{number}</NumberEl>
+            <BtnDellete onClick={() => handleClick(id)}>Delete</BtnDellete>
+          </ItemEl>
+        ))}
+      </ContactList>
+    </>
   );
-}
+};
 
 export default ContactsList;

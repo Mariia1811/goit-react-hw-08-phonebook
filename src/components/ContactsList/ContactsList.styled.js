@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const TitleList = styled.h2`
+  margin: 0 0 20px;
+  font-size: 32px;
+  font-style: oblique;
+  color: #576574;
+  text-shadow: #000 0px 0 1px;
+`;
+
 export const ContactList = styled.ul`
   margin: 16px;
   padding: 0;

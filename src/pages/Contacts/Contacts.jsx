@@ -2,17 +2,17 @@ import ContactsList from 'components/ContactsList';
 import Filter from 'components/Filter';
 import FormElem from 'components/FormContacts';
 import Container from '@mui/material/Container';
-import { MainTitle, Title, Wrapper } from './Contacts.styled';
+import { Wrapper } from './Contacts.styled';
 
 const Contacts = () => {
   return (
     <Container maxWidth="xl">
       <Wrapper>
-        <MainTitle>Add contact</MainTitle>
         <FormElem />
-        <Title>Contacts</Title>
-        <Filter />
-        <ContactsList />
+        <div>
+          <Filter />
+          <ContactsList />
+        </div>
       </Wrapper>
     </Container>
   );
