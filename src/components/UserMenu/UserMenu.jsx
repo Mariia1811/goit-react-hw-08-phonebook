@@ -13,7 +13,7 @@ const UserMenu = () => {
 
   return (
     <WrapperUserManu>
-      <UserNameText>Welcome, {user.name}</UserNameText>
+      <UserNameText>Welcome, {user.email}</UserNameText>
       <Logout type="button" onClick={() => handleClick()}>
         Logout
       </Logout>

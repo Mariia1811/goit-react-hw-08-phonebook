@@ -8,16 +8,18 @@ export const Text = styled.p`
   margin: 0;
   font-style: italic;
   font-size: 20px;
+  color: #576574;
 `;
 
 export const Input = styled.input`
-  min-width: 280px;
-  margin-left: 10px;
-  padding: 4px;
-  font-size: 20px;
-  overflow: hidden;
-  border: 1px solid rgba(33, 33, 33, 0.5);
+   min-width: 280px;
+  padding: 6px;
+  font-size: 16px;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
   outline: none;
+   &:hover {
+   box-shadow: 0px 4px 4px rgba(0, 0, 200, 0.5);
 `;
