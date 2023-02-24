@@ -9,7 +9,7 @@ export const LoginFormWrapper = styled.section`
 `;
 
 export const LoginFormTitle = styled.h2`
-  margin: 0 0 24px;
+  margin: 0 0 80px;
   font-size: 32px;
   font-style: oblique;
   color: #576574;
@@ -28,6 +28,7 @@ export const LoginFormLabel = styled.label`
   gap: 5px;
   font-size: 18px;
   margin-bottom: 8px;
+  color: #576574;
 `;
 
 export const LoginFormInput = styled(Field)`

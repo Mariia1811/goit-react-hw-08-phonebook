@@ -34,7 +34,7 @@ const Login = () => {
   return (
     <Container maxWidth="xl">
       <LoginFormWrapper>
-        <LoginFormTitle>Login Form</LoginFormTitle>
+        <LoginFormTitle>Please, login to access your contacts</LoginFormTitle>
         <Formik
           initialValues={{ email: '', password: '' }}
           validationSchema={validationSchema}

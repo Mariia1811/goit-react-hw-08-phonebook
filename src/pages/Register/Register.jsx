@@ -37,7 +37,7 @@ const RegisterForm = () => {
   return (
     <Container maxWidth="xl">
       <RegisterFormWrapper>
-        <RegisterFormTitle>Registration Form</RegisterFormTitle>
+        <RegisterFormTitle>Create your own phone book by registering now!</RegisterFormTitle>
         <Formik
           initialValues={{
             name: '',

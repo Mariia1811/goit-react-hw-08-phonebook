@@ -28,6 +28,7 @@ export const RegisterFormLabel = styled.label`
   gap: 5px;
   font-size: 18px;
   margin-bottom: 8px;
+  color: #576574;
 `;
 
 export const RegisterFormInput = styled(Field)`
